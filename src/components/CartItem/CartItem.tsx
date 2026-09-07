@@ -47,7 +47,7 @@ export const CartItem = ({ item }: Props) => {
           </svg>
         </button>
         <img
-          src={`/${item.product.images[0]}`}
+          src={`${item.product.images[0]}`}
           alt={item.product.name}
           className={styles.cart__img}
         />

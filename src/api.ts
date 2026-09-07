@@ -4,9 +4,9 @@ export const getProduct = async (
   productId: string,
 ): Promise<Product | undefined> => {
   const [phones, tablets, accessories]: Product[][] = await Promise.all([
-    fetch('/api/phones.json').then(response => response.json()),
-    fetch('/api/tablets.json').then(response => response.json()),
-    fetch('/api/accessories.json').then(response => response.json()),
+    fetch('api/phones.json').then(response => response.json()),
+    fetch('api/tablets.json').then(response => response.json()),
+    fetch('api/accessories.json').then(response => response.json()),
   ]);
 
   return (
@@ -20,9 +20,9 @@ export const getSuggestedProducts = async (
   currentProductId: string,
 ): Promise<Product[]> => {
   const [phones, tablets, accessories]: Product[][] = await Promise.all([
-    fetch('/api/phones.json').then(response => response.json()),
-    fetch('/api/tablets.json').then(response => response.json()),
-    fetch('/api/accessories.json').then(response => response.json()),
+    fetch('api/phones.json').then(response => response.json()),
+    fetch('api/tablets.json').then(response => response.json()),
+    fetch('api/accessories.json').then(response => response.json()),
   ]);
 
   const products = [...phones, ...tablets, ...accessories];

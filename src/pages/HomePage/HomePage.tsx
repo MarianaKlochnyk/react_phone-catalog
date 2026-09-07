@@ -164,7 +164,7 @@ export const HomePage = () => {
                 <div className={styles['category-item']}>
                   <Link to="/phones">
                     <img
-                      src="/img/phones.png"
+                      src="img/phones.png"
                       alt="Phones category"
                       className={styles['category-item__photo']}
                     />
@@ -183,7 +183,7 @@ export const HomePage = () => {
                 <div className={styles['category-item']}>
                   <Link to="/tablets">
                     <img
-                      src="/img/tablets.png"
+                      src="img/tablets.png"
                       alt="Tablets category"
                       className={styles['category-item__photo']}
                     />
@@ -202,7 +202,7 @@ export const HomePage = () => {
                 <div className={styles['category-item']}>
                   <Link to="/accessories">
                     <img
-                      src="/img/accessories.png"
+                      src="img/accessories.png"
                       alt="Accessories category"
                       className={styles['category-item__photo']}
                     />

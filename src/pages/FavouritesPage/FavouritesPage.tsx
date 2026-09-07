@@ -23,7 +23,7 @@ export const FavouritesPage = () => {
         <div className={styles.favourites__header}>
           <Link to={'/'}>
             <img
-              src="/img/icons/home.svg"
+              src="img/icons/home.svg"
               alt="Home icon"
               className={styles.favourites__homeIcon}
             />

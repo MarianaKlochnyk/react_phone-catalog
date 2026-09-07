@@ -55,7 +55,7 @@ export const ProductCard = ({ product }: Props) => {
         <button className={styles.add}>Add to cart</button>
         <button className={styles.favourite}>
           <img
-            src="/img/icons/favourites-icon.svg"
+            src="img/icons/favourites-icon.svg"
             alt="Favourites icon"
             className={styles.favourite__icon}
           />

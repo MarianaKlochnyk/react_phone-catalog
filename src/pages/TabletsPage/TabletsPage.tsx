@@ -107,7 +107,7 @@ export const TabletsPage = () => {
         <div className={styles.tablets__header}>
           <Link to={'/'}>
             <img
-              src="/img/icons/home.svg"
+              src="img/icons/home.svg"
               alt="Home icon"
               className={styles.tablets__homeIcon}
             />

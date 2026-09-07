@@ -109,7 +109,7 @@ export const AccessoriesPage = () => {
         <div className={styles.accessories__header}>
           <Link to={'/'}>
             <img
-              src="/img/icons/home.svg"
+              src="img/icons/home.svg"
               alt="Home icon"
               className={styles.accessories__homeIcon}
             />

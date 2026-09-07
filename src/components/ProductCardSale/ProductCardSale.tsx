@@ -57,7 +57,7 @@ export const ProductCardSale = ({ product }: Props) => {
     <div className={styles.card}>
       <Link to={`/product/${product.id}`} className={styles.cardLink}>
         <img
-          src={`/${product.images[0]}`}
+          src={`${product.images[0]}`}
           alt={product.name}
           className={styles.card__photo}
         />

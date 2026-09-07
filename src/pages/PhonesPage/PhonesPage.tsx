@@ -107,7 +107,7 @@ export const PhonesPage = () => {
         <div className={styles.phones__header}>
           <Link to={'/'}>
             <img
-              src="/img/icons/home.svg"
+              src="img/icons/home.svg"
               alt="Home icon"
               className={styles.phones__homeIcon}
             />

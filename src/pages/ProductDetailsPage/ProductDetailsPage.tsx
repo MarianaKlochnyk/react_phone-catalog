@@ -109,7 +109,7 @@ export const ProductDetailsPage = () => {
         <div className={styles.details__header}>
           <Link to="/" className={styles.details__homeLink}>
             <img
-              src="/img/icons/home.svg"
+              src="img/icons/home.svg"
               alt="Home icon"
               className={styles.details__homeIcon}
             />
@@ -171,7 +171,7 @@ export const ProductDetailsPage = () => {
           <div className={styles.details__photos}>
             <div className={styles.details__photo}>
               <img
-                src={`/${selectedImage}`}
+                src={`${selectedImage}`}
                 alt={product.name}
                 className={styles.details__mainImage}
               />
@@ -190,7 +190,7 @@ export const ProductDetailsPage = () => {
                   }`}
                 >
                   <img
-                    src={`/${image}`}
+                    src={`${image}`}
                     alt={product.name}
                     className={styles['details__thumbnail--img']}
                   />
@@ -273,7 +273,7 @@ export const ProductDetailsPage = () => {
                 <button className={styles.add}>Add to cart</button>
                 <button className={styles.favourite}>
                   <img
-                    src="/img/icons/favourites-icon.svg"
+                    src="img/icons/favourites-icon.svg"
                     alt="Favourites icon"
                     className={styles.favourite__icon}
                   />

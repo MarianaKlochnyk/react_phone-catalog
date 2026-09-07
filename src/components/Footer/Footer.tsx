@@ -8,7 +8,7 @@ export const Footer = () => {
       <footer className={styles.footer}>
         <Link to="/">
           <img
-            src="/img/Logo.svg"
+            src="img/Logo.svg"
             alt="Phone catalog"
             className={styles.footer__logo}
           />
@@ -32,7 +32,7 @@ export const Footer = () => {
               });
             }}
           >
-            <img src="/img/icons/back-icon.svg" alt="Back button" />
+            <img src="img/icons/back-icon.svg" alt="Back button" />
           </button>
         </div>
       </footer>

@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import styles from './PactureSlider.module.scss';
 
 const slides = [
-  '/img/slider/banner-1.jpg',
-  '/img/slider/banner-2.jpg',
-  '/img/slider/banner-3.jpg',
+  'img/slider/banner-1.jpg',
+  'img/slider/banner-2.jpg',
+  'img/slider/banner-3.jpg',
 ];
 
 export const PictureSlider = () => {
