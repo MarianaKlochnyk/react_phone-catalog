@@ -99,7 +99,7 @@ export const Header = () => {
 
         <div className={styles.headerActions}>
           <NavLink
-            to="/favourites"
+            to="/favorites"
             className={({ isActive }) =>
               `${styles.headerActionButton} ${
                 isActive ? styles['headerActionButton--selected'] : ''
@@ -254,7 +254,7 @@ export const Header = () => {
 
           <div className={styles.mobileMenu__headerActions}>
             <NavLink
-              to="/favourites"
+              to="/favorites"
               className={({ isActive }) =>
                 `${styles.headerActionButton} ${
                   isActive ? styles['headerActionButton--selected'] : ''

@@ -6,7 +6,7 @@ import { Footer } from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import { Loader } from '../../components/Loader';
 import { ProductList } from '../../components/ProductList';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 export const TabletsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -105,11 +105,13 @@ export const TabletsPage = () => {
       <Header />
       <div className={styles.tablets}>
         <div className={styles.tablets__header}>
-          <img
-            src="/img/icons/home.svg"
-            alt="Home icon"
-            className={styles.tablets__homeIcon}
-          />
+          <Link to={'/'}>
+            <img
+              src="/img/icons/home.svg"
+              alt="Home icon"
+              className={styles.tablets__homeIcon}
+            />
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

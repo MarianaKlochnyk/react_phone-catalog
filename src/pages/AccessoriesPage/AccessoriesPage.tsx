@@ -6,7 +6,7 @@ import { Footer } from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import { Loader } from '../../components/Loader';
 import { ProductList } from '../../components/ProductList';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 export const AccessoriesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -106,8 +106,32 @@ export const AccessoriesPage = () => {
     <>
       <Header />
       <div className={styles.accessories}>
+        <div className={styles.accessories__header}>
+          <Link to={'/'}>
+            <img
+              src="/img/icons/home.svg"
+              alt="Home icon"
+              className={styles.accessories__homeIcon}
+            />
+          </Link>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className={styles.accessories__arrowIcon}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+          <p className={styles.accessories__headerText}>Accessories</p>
+        </div>
         <div className={styles.accessories__info}>
-          <h1 className={styles.accessories__title}>Tablets</h1>
+          <h1 className={styles.accessories__title}>Accessories</h1>
           <p className={styles.accessories__amount}>
             {accessories.length} models
           </p>

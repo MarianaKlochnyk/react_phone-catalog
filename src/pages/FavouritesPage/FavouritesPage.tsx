@@ -5,6 +5,7 @@ import { Header } from '../../components/Header';
 import { useContext } from 'react';
 import { FavoritesContext } from '../../context/FavoritesContext';
 import { ProductList } from '../../components/ProductList';
+import { Link } from 'react-router-dom';
 
 export const FavouritesPage = () => {
   const context = useContext(FavoritesContext);
@@ -20,11 +21,13 @@ export const FavouritesPage = () => {
       <Header />
       <div className={styles.favourites}>
         <div className={styles.favourites__header}>
-          <img
-            src="/img/icons/home.svg"
-            alt="Home icon"
-            className={styles.favourites__homeIcon}
-          />
+          <Link to={'/'}>
+            <img
+              src="/img/icons/home.svg"
+              alt="Home icon"
+              className={styles.favourites__homeIcon}
+            />
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
