@@ -34,7 +34,7 @@ export const Header = () => {
         <div className={styles.header__main}>
           <Link to="/">
             <img
-              src="/img/Logo.svg"
+              src="img/Logo.svg"
               alt="Phone catalog"
               className={styles.logo}
             />
@@ -144,7 +144,7 @@ export const Header = () => {
           >
             <div className={styles.cartIcon}>
               <img
-                src="/img/icons/shopping-icon.svg"
+                src="img/icons/shopping-icon.svg"
                 alt="Cart"
                 className={styles.headerActionButton__icon}
               />
@@ -161,7 +161,7 @@ export const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <img
-            src="/img/icons/menu.svg"
+            src="img/icons/menu.svg"
             alt="Open menu"
             className={styles.menuButton__icon}
           />
@@ -177,7 +177,7 @@ export const Header = () => {
           <div className={`${styles['top-bar']} ${styles.menu__top}`}>
             <Link to="/" className={styles['top-bar__logo']}>
               <img
-                src="/img/Logo.svg"
+                src="img/Logo.svg"
                 alt="Phone catalog"
                 className={styles.logo}
               />
@@ -189,7 +189,7 @@ export const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <img
-                src="/img/icons/close-icon.svg"
+                src="img/icons/close-icon.svg"
                 alt="Close icon"
                 className={styles['top-bar__closeButton__icon']}
               />
@@ -299,7 +299,7 @@ export const Header = () => {
             >
               <div className={styles.cartIcon}>
                 <img
-                  src="/img/icons/shopping-icon.svg"
+                  src="img/icons/shopping-icon.svg"
                   alt="Cart"
                   className={styles.headerActionButton__icon}
                 />

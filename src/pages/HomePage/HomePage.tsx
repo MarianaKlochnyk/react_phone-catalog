@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
+
 import { ProductCard } from '../../components/ProductCard';
 import { PictureSlider } from '../../components/PictureSlider/PictureSlider';
 
