@@ -57,7 +57,7 @@ export const TabletsPage = () => {
         );
 
   useEffect(() => {
-    fetch('/api/tablets.json')
+    fetch('api/tablets.json')
       .then(response => response.json())
       .then(data => {
         setTablets(data);

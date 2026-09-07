@@ -23,7 +23,7 @@ type Props = {
 export const ProductCard = ({ product }: Props) => {
   return (
     <div className={styles.card}>
-      <Link to={`/product/${product.id}`} className={styles.cardLink}>
+      <Link to={`/product/${product.itemId}`} className={styles.cardLink}>
         <img
           src={product.image}
           alt={product.name}

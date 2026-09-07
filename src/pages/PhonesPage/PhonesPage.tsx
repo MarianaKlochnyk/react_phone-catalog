@@ -57,7 +57,7 @@ export const PhonesPage = () => {
         );
 
   useEffect(() => {
-    fetch('/api/phones.json')
+    fetch('api/phones.json')
       .then(response => response.json())
       .then(data => {
         setPhones(data);
