@@ -109,6 +109,14 @@
   color: #fff;
   font-size: 14px;
   border: none;
+  &--active {
+    background-color: transparent;
+    border: 1px solid #e2e6e9;
+    color: #27ae60;
+  }
+  &:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .favourite {
@@ -119,6 +127,17 @@
   &__icon {
     width: 16px;
     height: 16px;
+    color: #313237;
+  }
+  &:hover {
+    border: 1px solid #313237;
+  }
+}
+
+.favourite--active {
+  .favourite__icon {
+    fill: #eb5757;
+    color: #eb5757;
   }
 }
 
