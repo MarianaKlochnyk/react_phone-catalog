@@ -30,8 +30,8 @@
     }
   }
   &__img {
-    width: 80px;
-    height: auto;
+    width: auto;
+    height: 80px;
   }
   &__name {
     font-family: Mont, sans-serif;
@@ -108,6 +108,10 @@
     }
     &__price {
       width: 80px;
+    }
+    &__img {
+      width: 80px;
+      height: auto;
     }
   }
 }
