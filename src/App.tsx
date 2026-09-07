@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import { HomePage } from './pages/HomePage/HomePage';
 import { PhonesPage } from './pages/PhonesPage/PhonesPage';
@@ -13,7 +13,7 @@ import { FavoritesProvider } from './context/FavoritesContext';
 import { CartProvider } from './context/CartContext';
 
 export const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <FavoritesProvider>
       <CartProvider>
         <div className="App">
@@ -33,5 +33,5 @@ export const App = () => (
         </div>
       </CartProvider>
     </FavoritesProvider>
-  </BrowserRouter>
+  </HashRouter>
 );
