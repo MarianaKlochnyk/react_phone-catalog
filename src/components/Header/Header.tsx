@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 
-import { useContext, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FavoritesContext } from '../../context/FavoritesContext';
 import { CartContext } from '../../context/CartContext';
@@ -24,9 +24,10 @@ export const Header = () => {
 
   const { cartItems } = contextCart;
 
-  let totalLength = 0;
-
-  cartItems.map(item => (totalLength += item.quantity));
+  const totalLength = useMemo(
+    () => cartItems.reduce((total, item) => total + item.quantity, 0),
+    [cartItems],
+  );
 
   return (
     <>

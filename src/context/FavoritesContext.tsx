@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 
-import { type Product } from '../components/ProductCardSale';
+import { type Product } from '../types';
 
 type FavoritesContextType = {
   favourites: Product[];

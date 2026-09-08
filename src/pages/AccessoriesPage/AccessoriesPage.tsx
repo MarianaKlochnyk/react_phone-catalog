@@ -1,19 +1,20 @@
 /* eslint-disable @typescript-eslint/indent */
 import styles from './AccessoriesPage.module.scss';
-import { type Product } from '../../components/ProductCardSale';
+import { type Product } from '../../types';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Loader } from '../../components/Loader';
 import { ProductList } from '../../components/ProductList';
 import { Link, useSearchParams } from 'react-router-dom';
+import { getYear } from '../../helpers/helpers';
 
 export const AccessoriesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [accessories, setAccessories] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [hasError, setHasError] = useState<boolean>(false);
 
   const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(
     Number(searchParams.get('perPage')) || 'all',
@@ -25,25 +26,23 @@ export const AccessoriesPage = () => {
     searchParams.get('sort') || 'age',
   );
 
-  const sortedAccessories = [...accessories];
+  const sortedAccessories = useMemo(() => {
+    const sorted = [...accessories];
 
-  const getYear = (product: Product) => {
-    const match = product.name.match(/\((\d{4})\)/);
+    if (typePerPage === 'age') {
+      sorted.sort((a, b) => getYear(b) - getYear(a));
+    }
 
-    return match ? Number(match[1]) : 0;
-  };
+    if (typePerPage === 'title') {
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+    }
 
-  if (typePerPage === 'age') {
-    sortedAccessories.sort((a, b) => getYear(b) - getYear(a));
-  }
+    if (typePerPage === 'price') {
+      sorted.sort((a, b) => a.priceDiscount - b.priceDiscount);
+    }
 
-  if (typePerPage === 'title') {
-    sortedAccessories.sort((a, b) => a.name.localeCompare(b.name));
-  }
-
-  if (typePerPage === 'price') {
-    sortedAccessories.sort((a, b) => a.priceDiscount - b.priceDiscount);
-  }
+    return sorted;
+  }, [accessories, typePerPage]);
 
   const totalPages =
     itemsPerPage === 'all'

@@ -3,31 +3,7 @@ import styles from './ProductCardSale.module.scss';
 import { useContext } from 'react';
 import { FavoritesContext } from '../../context/FavoritesContext';
 import { CartContext } from '../../context/CartContext';
-
-export type Product = {
-  id: string;
-  category: string;
-  namespaceId: string;
-  name: string;
-  capacityAvailable: string[];
-  capacity: string;
-  priceRegular: number;
-  priceDiscount: number;
-  colorsAvailable: string[];
-  color: string;
-  images: string[];
-  description: {
-    title: string;
-    text: string[];
-  }[];
-  screen: string;
-  resolution: string;
-  processor: string;
-  ram: string;
-  camera?: string;
-  zoom?: string;
-  cell: string[];
-};
+import { Product } from '../../types';
 
 type Props = {
   product: Product;
