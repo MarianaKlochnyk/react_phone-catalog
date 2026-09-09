@@ -6,7 +6,15 @@
   border: none;
 }
 
+.link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .cart {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +97,9 @@
 }
 
 @include on-tablet {
+  .link {
+    gap: 24px;
+  }
   .cart {
     display: flex;
     flex-direction: row;

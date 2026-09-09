@@ -22,9 +22,15 @@
   border: 1px solid #e2e6e9;
   width: 212px;
   min-height: 439px;
+  &:hover {
+    transform: scale(1.1);
+  }
+
   &__photo {
-    width: 148px;
-    height: auto;
+    transition: transform 0.3s ease;
+
+    width: auto;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,8 +87,8 @@
 .price {
   display: flex;
   flex-direction: row;
+  gap: 4px;
   width: 109px;
-  justify-content: space-between;
 }
 
 .name {
@@ -93,6 +99,8 @@
 }
 
 .detail {
+  text-align: right;
+  margin: 0;
   font-family: Mont, sans-serif;
   font-size: 12px;
   color: #313237;
@@ -146,7 +154,7 @@
     width: 237px;
     min-height: 512px;
     &__photo {
-      width: 173px;
+      height: 175px;
     }
     &__info::after {
       width: 173px;
@@ -162,7 +170,7 @@
     width: 272px;
     min-height: 506px;
     &__photo {
-      width: 196px;
+      height: 196px;
     }
     &__info::after {
       width: 208px;

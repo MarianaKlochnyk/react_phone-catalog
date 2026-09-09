@@ -23,9 +23,13 @@
   width: 287px;
   min-height: 440px;
   flex-shrink: 0;
+  &:hover {
+    transform: scale(1.1);
+  }
   &__photo {
-    width: 148px;
-    height: auto;
+    transition: transform 0.3s ease;
+    width: auto;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,6 +88,7 @@
   flex-direction: row;
   width: 109px;
   justify-content: space-between;
+  gap: 4px;
 }
 
 .name {
@@ -94,6 +99,7 @@
 }
 
 .detail {
+  text-align: right;
   font-family: Mont, sans-serif;
   font-size: 12px;
   color: #313237;
@@ -147,7 +153,7 @@
     width: 288px;
     min-height: 506px;
     &__photo {
-      width: 165px;
+      height: 175px;
     }
     &__info::after {
       width: 224px;
@@ -160,7 +166,7 @@
     width: 272px;
     min-height: 506px;
     &__photo {
-      width: 196px;
+      height: 196px;
     }
     &__info::after {
       width: 208px;

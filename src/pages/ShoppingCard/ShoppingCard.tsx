@@ -31,77 +31,81 @@ export const ShoppingCard = () => {
   if (cartItems.length === 0) {
     return (
       <>
-        <Header />
+        <div className={styles.page}>
+          <Header />
 
-        <div className={styles.shopping}>
-          <h1 className={styles.shopping__title}>Cart</h1>
-          <p>Your cart is empty</p>
+          <div className={styles.shopping}>
+            <h1 className={styles.shopping__title}>Cart</h1>
+            <p>Your cart is empty</p>
+          </div>
+
+          <Footer />
         </div>
-
-        <Footer />
       </>
     );
   }
 
   return (
     <>
-      <Header />
-      <div className={styles.shopping}>
-        <div className={styles.shopping__header}>
-          <button
-            onClick={() => navigate(-1)}
-            className={styles.shopping__button}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className={styles.shopping__backIcon}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5 8.25 12l7.5-7.5"
-              />
-            </svg>
-          </button>
-          <p className={styles.shopping__headerText}>Back</p>
-        </div>
-        <h1 className={styles.shopping__title}>Cart</h1>
-        <div className={styles.shopping__main}>
-          <div className={styles.shopping__products}>
-            {cartItems.map(item => (
-              <CartItem key={item.id} item={item} />
-            ))}
-          </div>
-          <div className={styles.shopping__checkoutPrice}>
-            <div className={styles.shopping__pricesText}>
-              <p className={styles.shopping__allPrice}>${totalPrice}</p>
-              <p className={styles.shopping__total}>
-                Total for {totalLength} items
-              </p>
-            </div>
+      <div className={styles.page}>
+        <Header />
+        <div className={styles.shopping}>
+          <div className={styles.shopping__header}>
             <button
-              onClick={() => {
-                const shouldClear = confirm(
-                  // eslint-disable-next-line max-len
-                  'Checkout is not implemented yet. Do you want to clear the Cart?',
-                );
-
-                if (shouldClear) {
-                  setCartItems([]);
-                }
-              }}
-              className={styles.shopping__buttonCheckout}
+              onClick={() => navigate(-1)}
+              className={styles.shopping__button}
             >
-              Checkout
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className={styles.shopping__backIcon}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                />
+              </svg>
             </button>
+            <p className={styles.shopping__headerText}>Back</p>
+          </div>
+          <h1 className={styles.shopping__title}>Cart</h1>
+          <div className={styles.shopping__main}>
+            <div className={styles.shopping__products}>
+              {cartItems.map(item => (
+                <CartItem key={item.id} item={item} />
+              ))}
+            </div>
+            <div className={styles.shopping__checkoutPrice}>
+              <div className={styles.shopping__pricesText}>
+                <p className={styles.shopping__allPrice}>${totalPrice}</p>
+                <p className={styles.shopping__total}>
+                  Total for {totalLength} items
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  const shouldClear = confirm(
+                    // eslint-disable-next-line max-len
+                    'Checkout is not implemented yet. Do you want to clear the Cart?',
+                  );
+
+                  if (shouldClear) {
+                    setCartItems([]);
+                  }
+                }}
+                className={styles.shopping__buttonCheckout}
+              >
+                Checkout
+              </button>
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

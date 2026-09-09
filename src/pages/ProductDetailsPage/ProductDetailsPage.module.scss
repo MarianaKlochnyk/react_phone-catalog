@@ -60,7 +60,7 @@
   &__headerText--object {
     font-family: Mont, sans-serif;
     font-size: 12px;
-    color: #89939A;
+    color: #89939a;
     font-weight: 600;
   }
   &__back {
@@ -169,8 +169,8 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: none;
     cursor: pointer;
+    border: 1px solid #b4bdc3;
 
     &--selected {
       outline: 1px solid #313237;
@@ -277,6 +277,14 @@
   color: #fff;
   font-size: 14px;
   border: none;
+  &--active {
+    background-color: transparent;
+    border: 1px solid #e2e6e9;
+    color: #27ae60;
+  }
+  &:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .favourite {
@@ -287,6 +295,17 @@
   &__icon {
     width: 16px;
     height: 16px;
+    color: #313237;
+  }
+  &:hover {
+    border: 1px solid #313237;
+  }
+}
+
+.favourite--active {
+  .favourite__icon {
+    fill: #eb5757;
+    color: #eb5757;
   }
 }
 
@@ -428,7 +447,7 @@
   }
   &__products {
     display: flex;
-    overflow:hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
     gap: 16px;
     width: 100%;
