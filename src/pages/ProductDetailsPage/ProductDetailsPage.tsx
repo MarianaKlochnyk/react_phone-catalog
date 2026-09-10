@@ -62,6 +62,10 @@ export const ProductDetailsPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [product]);
+
+  useEffect(() => {
     hotCheckScroll();
   }, [suggestedProducts]);
 
