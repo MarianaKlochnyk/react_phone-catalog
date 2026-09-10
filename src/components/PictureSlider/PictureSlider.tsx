@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './PactureSlider.module.scss';
+import { Link } from 'react-router-dom';
 
 const slides = [
   'img/slider/banner-1.jpg',
@@ -59,11 +60,21 @@ export const PictureSlider = () => {
           </svg>
         </button>
         <div className={styles.slider__imageContainer}>
-          <img
-            src={slides[currentSlide]}
-            className={styles.slider__image}
-            alt="Nice Gadgets"
-          />
+          {currentSlide === 0 ? (
+            <Link to="/phones">
+              <img
+                src={slides[currentSlide]}
+                className={styles.slider__image}
+                alt="Nice Gadgets"
+              />
+            </Link>
+          ) : (
+            <img
+              src={slides[currentSlide]}
+              className={styles.slider__image}
+              alt="Nice Gadgets"
+            />
+          )}
         </div>
         <button
           className={styles.slider__button}

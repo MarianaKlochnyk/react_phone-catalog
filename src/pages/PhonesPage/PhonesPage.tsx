@@ -99,6 +99,30 @@ export const PhonesPage = () => {
     setSearchParams(newParams);
   };
 
+  const getPaginationPages = () => {
+    if (totalPages <= 5) {
+      return Array.from({ length: totalPages }, (_, index) => index + 1);
+    }
+
+    if (currentPage <= 3) {
+      return [1, 2, 3, '...', totalPages];
+    }
+
+    if (currentPage >= totalPages - 2) {
+      return [1, '...', totalPages - 2, totalPages - 1, totalPages];
+    }
+
+    return [
+      1,
+      '...',
+      currentPage - 1,
+      currentPage,
+      currentPage + 1,
+      '...',
+      totalPages,
+    ];
+  };
+
   return (
     <>
       <Header />
@@ -223,19 +247,23 @@ export const PhonesPage = () => {
               </svg>
             </button>
             <div className={styles.phones__pagination}>
-              {Array.from({ length: totalPages }, (_, index) => (
-                <button
-                  className={
-                    currentPage === index + 1
-                      ? styles['pagination__button--active']
-                      : styles.pagination__button
-                  }
-                  key={index}
-                  onClick={() => changePage(index + 1)}
-                >
-                  {index + 1}
-                </button>
-              ))}
+              {getPaginationPages().map((page, index) =>
+                page === '...' ? (
+                  <span key={`dots-${index}`}>...</span>
+                ) : (
+                  <button
+                    className={
+                      currentPage === page
+                        ? styles['pagination__button--active']
+                        : styles.pagination__button
+                    }
+                    key={page}
+                    onClick={() => changePage(page)}
+                  >
+                    {page}
+                  </button>
+                ),
+              )}
             </div>
             <button
               className={styles.phones__button}

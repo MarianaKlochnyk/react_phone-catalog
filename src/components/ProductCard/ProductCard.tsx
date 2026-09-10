@@ -70,7 +70,10 @@ export const ProductCard = ({ product }: Props) => {
 
           <div className={styles.price}>
             <p className={styles.card__price}>${product.price}</p>
-            <p className={styles.card__price__sale}>${product.fullPrice}</p>
+
+            {product.fullPrice !== product.price && (
+              <p className={styles.card__price__sale}>${product.fullPrice}</p>
+            )}
           </div>
         </div>
 

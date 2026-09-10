@@ -123,6 +123,7 @@
     border: 1px solid #e2e6e9;
     padding: 4px;
     cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
     &:hover {
       border: 1px solid #313237;
     }
@@ -171,6 +172,7 @@
     border-radius: 50%;
     cursor: pointer;
     border: 1px solid #b4bdc3;
+    transition: border-color 0.3s ease, color 0.3s ease;
 
     &--selected {
       outline: 1px solid #313237;
@@ -205,6 +207,7 @@
     font-family: Mont, sans-serif;
     font-size: 14px;
     font-weight: 500;
+    transition: border-color 0.3s ease, color 0.3s ease;
     &--selected {
       background-color: #313237;
       color: #fff;
@@ -277,6 +280,8 @@
   color: #fff;
   font-size: 14px;
   border: none;
+  transition: box-shadow 0.3s ease;
+
   &--active {
     background-color: transparent;
     border: 1px solid #e2e6e9;
@@ -292,6 +297,8 @@
   width: 48px;
   height: 48px;
   border: 1px solid #b4bdc3;
+  transition: border-color 0.3s ease;
+
   &__icon {
     width: 16px;
     height: 16px;
@@ -312,6 +319,7 @@
 .price {
   display: flex;
   flex-direction: row;
+  gap: 4px;
   width: 109px;
   justify-content: space-between;
 }
@@ -425,6 +433,7 @@
     height: 32px;
     border: 1px solid #b4bdc3;
     color: #313237;
+    transition: border-color 0.3s ease, color 0.3s ease;
     &:disabled {
       border-color: #e2e6e9;
       color: #b4bdc3;

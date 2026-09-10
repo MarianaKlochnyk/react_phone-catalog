@@ -15,9 +15,15 @@ export const Footer = () => {
         </Link>
 
         <div className={styles.information}>
-          <p className={styles.information__text}>Github</p>
-          <p className={styles.information__text}>Contacts</p>
-          <p className={styles.information__text}>rights</p>
+          <Link to={'https://github.com/'} className={styles.link}>
+            <p className={styles.information__text}>Github</p>
+          </Link>
+          <Link to={''} className={styles.link}>
+            <p className={styles.information__text}>Contacts</p>
+          </Link>
+          <Link to={''} className={styles.link}>
+            <p className={styles.information__text}>rights</p>
+          </Link>
         </div>
 
         <div className={styles['button-back']}>

@@ -2,6 +2,10 @@
 @use '../../styles/utils/mixins.scss' as *;
 @use '../../styles/utils/fonts.scss' as *;
 
+.link {
+  text-decoration: none;
+}
+
 .footer {
   width: 100%;
   box-sizing: border-box;

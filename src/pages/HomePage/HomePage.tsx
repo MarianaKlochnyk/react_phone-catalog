@@ -152,7 +152,10 @@ export const HomePage = () => {
                 className={styles['new-models__products']}
               >
                 {newProducts.map(product => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard
+                    key={product.id}
+                    product={{ ...product, fullPrice: product.price }}
+                  />
                 ))}
               </div>
             </section>
