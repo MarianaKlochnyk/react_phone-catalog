@@ -22,13 +22,12 @@
   border: 1px solid #e2e6e9;
   width: 212px;
   min-height: 439px;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.05);
-  }
 
   &__photo {
     transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
 
     width: auto;
     height: 130px;
@@ -58,10 +57,12 @@
     align-items: flex-end;
   }
   &__price {
+    font-family: Mont, sans-serif;
     font-size: 22px;
     font-weight: 800;
     color: #313237;
     &__sale {
+      font-family: Mont, sans-serif;
       font-size: 22px;
       font-weight: 800;
       color: #89939a;

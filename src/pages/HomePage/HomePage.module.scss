@@ -125,13 +125,15 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    transition: transform 0.3s ease;
-    &:hover {
-      transform: scale(1.05);
-    }
+    
     &__photo {
       width: 288px;
       height: 288px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover &__photo {
+      transform: scale(1.05);
     }
     &__info {
       display: flex;
