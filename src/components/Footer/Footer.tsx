@@ -15,7 +15,11 @@ export const Footer = () => {
         </Link>
 
         <div className={styles.information}>
-          <Link to={'https://github.com/'} className={styles.link}>
+          <Link
+            to={'https://github.com/'}
+            target="_blank"
+            className={styles.link}
+          >
             <p className={styles.information__text}>Github</p>
           </Link>
           <Link to={''} className={styles.link}>
